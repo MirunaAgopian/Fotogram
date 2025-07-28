@@ -1,0 +1,314 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #071820;
+    color: white;
+    font-family: 'Figtree', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/figtree-v8-latin-regular.woff2) format('woff2');
+}
+
+
+header {
+    background-color: #0a222c;
+    display: flex;
+    justify-content: center;
+    position: fixed; 
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 32px 0;
+}
+
+.logo {
+    height: auto;
+    width: clamp(100px, 250px, 400px);
+}
+
+/* Main - styiling */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 160px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.main-content {
+    max-width: 1440px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.photos {
+    display: grid;
+    justify-content: center;
+}
+
+.photos-content {
+    min-width: 100%;
+    max-width: 1440px;
+    padding: 20px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.grid-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.grid-img:hover {
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px rgba(250, 248, 248, 0.8);
+}
+
+/* Footer styling */
+footer {
+    background-color: #0a222c;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1440px;
+    width: 100%; 
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+span {
+    display: block;
+    text-align: center;
+}
+
+.logo-footer{
+    height: 64px;
+    width: 64px;
+}
+
+@media (max-width: 640px) {
+    dialog {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+}
+
+
+/* Styling the specific elements for the dialog  */
+
+.d-none {
+    display: none;
+}
+
+#overlay{
+    background-color: hsla(55, 92%, 66%, 0.3);
+    cursor: pointer;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media(max-width: 1350px){
+    #overlay{
+        height: 150%;
+    }
+}
+
+@media(max-width: 700px){
+    #overlay{
+        height: 210%;
+    }
+}
+
+@media(max-width: 450px){
+    #overlay{
+        height: 360%;
+    }
+}
+
+ .dialog-container {
+    display: flex;
+    height: auto;
+    border-radius: 16px;
+    background: #0d3240;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+}
+
+
+@media(max-width: 750px){
+    .dialog-container{
+        width: 70%;
+    }
+}
+@media(max-width: 450px){
+    .dialog-container{
+        width: 80%;
+    }
+}
+
+
+.dialog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    padding: 0 8px;
+}
+
+.popup-img {
+    height: 350px;
+    width: 550px;
+    max-width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
+.dialog-box p {
+    color: white;
+    font-size: 18px;
+    margin-block-start: 8px;
+    margin-block-end: 1em;
+    text-align: center;
+}
+
+.close-btn {
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    background-color: #f1e851;
+    padding: 4px 6px;
+    border-radius: 18px;
+    align-self: flex-end;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+.arrow-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.arrow-btn {
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    background-color: #f1e851;
+    padding: 4px 6px;
+    border-radius: 18px;
+}
+
+
+@keyframes flipAndHide {
+    0% { transform: rotateY(0deg); opacity: 1; }
+    100% { transform: rotateY(180deg); opacity: 0; }
+}
+
+.flip-hide {
+    animation: flipAndHide 0.6s ease-in-out forwards;
+}
+
+.description {
+    position: absolute;
+    top: 120px;
+    width: 90%;
+    height: 200px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    line-height: 2;
+}
+
+@media(max-height: 650px) {
+    .dialog-container{
+        height: 400px;
+        top: 45%;
+    }
+
+    .popup-img{
+        max-height: 200px;
+    }
+
+    .close-btn, .arrow-btn {
+        height: 20px;
+        width: 20px;
+    }
+
+    .description {
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    height: 120px;
+}
+
+.dialog-box p {
+    font-size: 13px !important;
+}
+}
+
+@media(max-width: 600px){
+    .dialog-box p {
+    font-size: 15px !important;
+}
+}
