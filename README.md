@@ -2,11 +2,15 @@
 _A lightweight and interactive photo gallery built with vanilla JavaScript. Fotogram allows users to explore images in a stylish popup viewer, flip them for hidden descriptions, and navigate between them—all while showcasing basic JS logic.
 Perfect for beginners testing their front-end superpowers with loops, conditionals, and arrow functions._
 
-###🚀 Features
+### 🚀 Features
 🖼️ Popup Viewer: Click on any image to open it in a modal-style gallery. <br>
+
 🔄 Flip for Description: Each image has a backside with a short description, revealed via a smooth flip animation. <br>
+
 ➡️ Next/Prev Navigation: Browse through the image collection interactively. <br>
+
 🧪 JavaScript Practice: Focuses on for loops, if conditionals, and => arrow function syntax. <br>
+
 🎓 Great for beginners sharpening their DOM and logic skills. <br>
 
 ### 🛠️ Technologies Used
