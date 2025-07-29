@@ -62,4 +62,3 @@ Licensed under the MIT License.
 
 ### 🙌 Acknowledgments
 Made with 📷 snapshots, flip animations, and beginner-level JavaScript passion by Miruna Agopian 💙
-If you'd like, I can help you link this to a portfolio page or expand it with accessibility tips. Let me know!
